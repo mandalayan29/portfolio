@@ -1,0 +1,151 @@
+.page {
+    
+    margin: 0px;
+}
+
+.first-view {
+    height: 90vh;
+    position: relative;
+    .row {
+        height: 100%;
+
+    }
+    
+    .details {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 100px;
+
+        h1{
+            font-weight: bold;
+            color: rgb(61, 144, 221);
+        }
+        h1, h2 {
+            // filter: blur(1px);
+            text-shadow: 0 0 2px #000000;
+        }
+    }
+
+    .ayan-dp-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wave1 {
+        position: absolute;
+        // width: 110vw;
+        top: 0px;
+        overflow: hidden;
+        z-index: -1;
+        margin: 10px -100px;
+    }
+
+}
+
+.about-me {
+    // width: 70%;
+    margin: 30px auto;
+}
+
+.skills {
+    margin: 30px 100px;
+
+    .skills-container div:nth-child(1) { grid-area: languages; }
+    .skills-container div:nth-child(2) { grid-area: frontends; }
+    .skills-container div:nth-child(3) { grid-area: heading; }
+    .skills-container div:nth-child(4) { grid-area: backends; }
+    .skills-container div:nth-child(5) { grid-area: others; }
+    // .skills-container div:nth-child(n) {
+    //     width: 100% !important;
+    // }
+    .skills-container {
+        // height: 500px;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-areas: 
+            'languages languages languages frontends frontends'
+            'languages languages languages frontends frontends'
+            'backends backends heading frontends frontends'
+            'backends backends others others others'
+            'backends backends others others others'
+        ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        >div {
+            box-shadow: 1px 1px 3px skyblue, -1px -1px 3px rgb(5, 16, 20);
+            padding: 10px;
+            border-radius: 10px; 
+            // background-color: aqua;
+            // border: 1px solid red;
+            // height: 100px;
+            height: 100%;
+        }
+    }
+
+    .languages {
+        
+        .sub-heading {
+            width: 100%;
+            // border: 1px solid red;
+        }
+    }
+    .skills-container div:nth-child(2) { grid-area: frontends; }
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4em;
+        background-color: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        color: #1034B5;
+        font-weight: bold;
+    }
+    .skills-container div:nth-child(4) { grid-area: backends; }
+    .skills-container div:nth-child(5) { grid-area: others; }
+    
+
+}
+
+
+.skills {
+    .skills-container{
+        // overflow: hidden;
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            // justify-content: center;
+            // justify-content: space-between;
+            align-items: center;
+            // max-width: 100%;
+            .skill-item {
+                margin: 0px 10px;
+                padding: 10px;
+                padding-bottom: 5px;
+                box-shadow: 1px 1px 3px rgba(156, 156, 255, 0.904);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                min-width: calc( 100vw / 13 );
+                max-width: calc( 100vw / 13 );
+                border-radius: 20px;
+                margin-bottom: 20px;
+                .skill-icon {
+                    img {
+                        width: 75%;
+                    }
+                    width: 75%;
+                }
+                .skill-name {
+                    // font-size: 10px;
+                }
+            }
+        }
+    }
+}
